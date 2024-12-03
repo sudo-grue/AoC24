@@ -41,7 +41,7 @@ your lists?
 
 from pathlib import Path
 
-DEMO = "example.txt"
+DEMO = "test.txt"
 FULL = "data.txt"
 
 

@@ -32,7 +32,7 @@ Once again consider your left and right lists. What is their similarity score?
 from pathlib import Path
 from collections import Counter
 
-DEMO = "example.txt"
+DEMO = "test.txt"
 FULL = "data.txt"
 
 
