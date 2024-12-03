@@ -37,7 +37,7 @@ Analyze the unusual data from the engineers. How many reports are safe?
 
 from pathlib import Path
 
-DEMO = "example.txt"
+DEMO = "test.txt"
 FULL = "data.txt"
 
 

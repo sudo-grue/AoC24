@@ -23,7 +23,7 @@ remove a single level from unsafe reports. How many reports are now safe?
 from pathlib import Path
 from itertools import combinations
 
-DEMO = "example.txt"
+DEMO = "test.txt"
 FULL = "data.txt"
 
 
