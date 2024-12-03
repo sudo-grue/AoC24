@@ -24,7 +24,7 @@ if you add up all of the results of the multiplications?
 from pathlib import Path
 import re
 
-DEMO = "example.txt"
+DEMO = "test.txt"
 FULL = "data.txt"
 
 

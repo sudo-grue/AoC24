@@ -24,7 +24,7 @@ results of just the enabled multiplications?
 from pathlib import Path
 import re
 
-DEMO = "example.txt"
+DEMO = "test.txt"
 FULL = "data.txt"
 
 
