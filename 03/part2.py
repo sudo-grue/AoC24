@@ -31,10 +31,21 @@ FULL = "data.txt"
 def main():
     input_file = Path(__file__).parent / FULL
 
+    # Read file and remove all newline characters to process as a single string
     with input_file.open("r", encoding="ascii") as file:
         data = "".join(line.strip() for line in file)
 
+    # Pattern to match instructions of the form `mul(num1, num2)`
+    # Captures the two numbers (num1, num2) as groups
     instructions_pattern = r"mul\((\d+),(\d+)\)"
+
+    # Pattern to extract fields based on specific delimiters:
+    # - Starts at the beginning of the file or after `do()`
+    # - Matches any content up to `don't()` or the end of the file
+    # - Uses non-capturing groups `(?:...)` for the delimiters
+    #   - `^|do\(\)` matches the start of the file or `do()`
+    #   - `.*?` lazily captures the field content
+    #   - `don't\(\)|$` matches `don't()` or the end of the file
     fields_pattern = r"(?:^|do\(\))(.*?)(?:(?:don't\(\))|$)"
 
     total = 0
