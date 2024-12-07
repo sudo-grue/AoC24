@@ -18,7 +18,7 @@ def main():
         answer = int(answer)
         numbers = list(map(int, raw_numbers.split()))
         gap_count = len(numbers) - 1
-        combination_count = 3**gap_count  # 3 for mask of three operations
+        combination_count = 3 ** gap_count  # 3 for mask of three operations
 
         for int_mask in range(combination_count):
             calc_result = numbers[0]

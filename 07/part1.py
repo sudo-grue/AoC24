@@ -18,13 +18,12 @@ def main():
         answer = int(answer)
         numbers = list(map(int, raw_numbers.split()))
         gap_count = len(numbers) - 1
-        combination_count = 2**gap_count
+        combination_count = 2 ** gap_count  # 2 for mask of two operations
 
         # Creates bitmask for all +/* possibilities
         for bit_mask in range(combination_count):
             calc_result = numbers[0]
 
-            # -1 so it is against the gap between numbers
             for i in range(gap_count):
                 if (bit_mask >> i) & 1:
                     calc_result *= numbers[i + 1]
