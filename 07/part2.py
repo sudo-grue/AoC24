@@ -28,8 +28,7 @@ def main():
             # and destructive copies of an integer
             temp_mask = int_mask
             for i in range(gap_count):
-                op_code = temp_mask % 3
-                temp_mask //= 3
+                temp_mask, op_code = divmod(temp_mask, 3)
 
                 match op_code:
                     case 0:
